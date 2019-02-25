@@ -1,3 +1,4 @@
+
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
@@ -10,6 +11,8 @@ import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
+
+require(`katex/dist/katex.min.css`);
 
 export default class PostTemplate extends React.Component {
   render() {

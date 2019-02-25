@@ -1,7 +1,7 @@
 ---
-title: "Bold Mage"
+title: "시작"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
-date: "01/01/2017"
+date: "2019-02-25"
 category: "tech"
 tags:
     - programming
@@ -9,6 +9,8 @@ tags:
     - other
 ---
 # Quanto et ius coniunctis urbes
+
+$\overrightarrow{AB}$
 
 ## Sedisti civiliter
 
