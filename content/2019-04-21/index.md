@@ -2,6 +2,7 @@
 title: "Elixir 시작"
 date: "2019-04-21"
 category: "tech"
+cover: https://elixir-lang.org/
 tags:
     - elixir
 ---
