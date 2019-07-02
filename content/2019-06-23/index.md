@@ -107,4 +107,4 @@ private func insertLoop(from root: BinaryNode<Element>?, value: Element) -> Bina
 }
 ```
 
-다만, 위처럼 시간 복잡도가 logN으로 떨어지는 경우 딱히 재귀 호출 횟수때문에 문제가 생길 일은 없으므로 그냥 재귀 함수를 사용해도 무방하긴 하다.
+다만, 위처럼 콜 스택의 깊이가 logN으로 떨어지는 경우 딱히 재귀 호출 횟수때문에 문제가 생길 일은 없으므로 그냥 재귀 함수를 사용해도 무방하긴 하다.
