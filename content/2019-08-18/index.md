@@ -1,0 +1,28 @@
+---
+title: "SwiftUI"
+date: "2019-08-18"
+category: "tech"
+cover: https://developer.apple.com/swift/
+---
+
+지난 6월, WWDC 2019에서 애플 기기를 위한 새로운 UI 프레임워크인 SwiftUI가 발표됐다. 이전의 Xcode 스토리보드, 혹은 명령형 API를 통한 프로그래밍 방식이 갖고 있던 여러 문제점을 해결하려는 시도로, 많은 iOS 개발자들에게 환영받고 있는 분위기다.
+
+- UI 구조, 스타일, 애니메이션이 모두 선언형으로 표현된다.
+- 프리뷰가 강력하다. 코드의 수정사항이 바로 프리뷰에 반영된다.
+- 상태의 변경이 탐지되면, UI를 새로 그린다.
+
+기존에 프론트엔드 개발을 해 본 사람들은 금방 알아차릴 수 있을 테지만, 이는 React 및 그 개발도구가 갖고 있는 특징들이다.
+
+이제 슬슬 Swift를 가지고 쓸모있는 무언가를 만들어보고 싶어서 SwiftUI를 배워보려고 한다. Xcode 11 베타를 설치하면 SwiftUI를 바로 사용해볼 수 있다고 한다. 애플에서 직접 출판한 [SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)를 따라해 볼 생각이다.
+
+---
+
+React가 확산시킨 동적 선언형 UI 프로그래밍 방식이 Flutter와 SwiftUI를 통해 모바일 UI 프로그래밍 세계에도 확산되는 추세다.
+
+몇 년 전까지만 해도 HTML, XML 등의 마크업 언어를 통해 UI를 표현하는 방식이 일반적이었다면, 이제는 확실히 프로그래밍 언어를 통해 UI를 표현하는 방식이 대세로 자리잡는 분위기다. 정적 UI를 표현할 때야 정적 마크업 언어를 써도 문제가 없었으나, 빠르게 변화하는 동적 UI를 표현하기 위해서는 역시 프로그래밍 언어만한 것이 없을 것이다.
+
+다만 보통의 (명령형, 객체지향적) 프로그래밍 언어가 선언적으로 보이기 쉽지 않으므로, 프로그래밍 언어 자체에 여러 튜닝이 들어가는 사례들이 눈에 띈다.
+
+- React를 통해 선언형 UI를 표현하기 위해 JSX 문법이 등장했다.
+- Apple이 SwiftUI를 위해 Swift 언어에 상당수의 기능을 추가했다.
+- Kotlin의 [scope function](https://kotlinlang.org/docs/reference/scope-functions.html), Dart의 [cascade notation](https://dart.dev/guides/language/language-tour#cascade-notation-)을 통해 (DSL을 따로 만들 필요가 없을 정도로) 빌더 패턴을 훨씬 더 간결하게 표현할 수 있다.
