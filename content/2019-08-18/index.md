@@ -24,5 +24,5 @@ React가 확산시킨 동적 선언형 UI 프로그래밍 방식이 Flutter와 S
 다만 보통의 (명령형, 객체지향적) 프로그래밍 언어가 선언적으로 보이기 쉽지 않으므로, 프로그래밍 언어 자체에 여러 튜닝이 들어가는 사례들이 눈에 띈다.
 
 - React를 통해 선언형 UI를 표현하기 위해 JSX 문법이 등장했다.
-- Apple이 SwiftUI를 위해 Swift 언어에 상당수의 기능을 추가했다.
+- Apple이 SwiftUI를 위해 Swift 언어에 [상당수의 기능을 추가했다](https://medium.com/swift2go/inside-swiftuis-declarative-syntax-s-compiler-magic-df9336d640f3).
 - Kotlin의 [scope function](https://kotlinlang.org/docs/reference/scope-functions.html), Dart의 [cascade notation](https://dart.dev/guides/language/language-tour#cascade-notation-)을 통해 (DSL을 따로 만들 필요가 없을 정도로) 빌더 패턴을 훨씬 더 간결하게 표현할 수 있다.
