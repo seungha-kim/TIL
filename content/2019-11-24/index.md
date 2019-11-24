@@ -11,7 +11,7 @@ tags:
 
 사이드 프로젝트 하다가 배운 것.
 
-다음과 같은 테이블/데이터가 있다고 하자.
+다음과 같은 테이블/데이터가 있다고 하자. ([db-fiddle 링크](https://www.db-fiddle.com/f/dLGvHhfLFV9eKMrD44DbeR/0))
 
 ```sql
 CREATE TABLE students
