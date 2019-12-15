@@ -123,6 +123,6 @@ function requestState<Data, Error, Name extends string>(name: Name, either: Eith
 
 const state = requestState('myState', new Either<number, string>())
 
-// lookup type - number로 추론된다.
+// lookup type - DataType은 number가 된다.
 type DataType = (typeof state.either)['DataType']
 ```
