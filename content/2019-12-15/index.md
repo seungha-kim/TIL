@@ -99,7 +99,7 @@ function requestState<Data, Error, Name extends string>(name: Name, either: Eith
 const state = requestState('myState', new Either<number, string>())
 ```
 
-위 코드에서 `Data`, `Error` 타입 파라미터를 사용하지 않았기 때문에 `All type parameters are unused` 경고가 뜬다. 이를 해결하기 위해 `// @ts-ignore`를 써줘도 되지만, 조금 더 우아한 방법이 있다.
+위 코드의 `Either` 클래스 내부에서 `Data`, `Error` 타입 파라미터를 사용하지 않았기 때문에 `All type parameters are unused` 경고가 뜬다. 이를 해결하기 위해 `// @ts-ignore`를 써줘도 되지만, 조금 더 우아한 방법이 있다.
 
 아이디어는 non-null assertion을 적용한 속성을 사용하는 것이다. 이렇게 하면 `requestState` 함수가 끝나고 나서도 `Data`, `Error`에 적용된 타입 인수를 가져오는 것이 가능해진다.
 
