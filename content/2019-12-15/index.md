@@ -116,13 +116,13 @@ function requestState<Data, Error, Name extends string>(name: Name, either: Eith
     name,
     data: null as Data | null,
     error: null as Error | null,
-    // either
+    // 테스트를 위해 반환되는 객체에 either를 추가해본다.
     either
   }
 }
 
 const state = requestState('myState', new Either<number, string>())
 
-// lookup type - DataType은 number가 된다.
-type DataType = (typeof state.either)['DataType']
+// lookup type - 결과적으로 MyType은 number가 된다.
+type MyType = (typeof state.either)['DataType']
 ```
