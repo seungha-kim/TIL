@@ -1,0 +1,85 @@
+---
+title: "공변성, 반공변성"
+date: "2020-04-26"
+category: "tech"
+cover: https://graphql.org/
+tags:
+    - TypeScript
+    - Subtype
+---
+
+서브타이핑을 지원하는 프로그래밍 언어에서, 서로 다른 두 타입 A, B의 서브타입 관계를 가지고
+A, B를 구성요소로 가지는 복합타입의 서브타입 관계를 결정할 수 있을까?
+
+(여기서 복합타입이란, 배열, 함수 등 다른 타입들을 구성요소로 가지는 더 복잡한 타입을 가리킨다.)
+
+TypeScript의 경우를 살펴보면,
+
+```typescript
+class Animal {
+  move() {/* ... */}
+}
+
+class Dog extends Animal {
+  bark() {/* ... */}
+}
+
+class Cat extends Animal {
+  meow() {/* ... */}
+}
+```
+
+위와 같이 세 타입이 있다고 할 때, 아래와 같이 `Dog[]`는 `Animal[]`의 서브타입으로 간주된다.
+
+```typescript
+const dogs: Dog[] = [/* ... */]
+const animals: Animal[] = dogs
+// 아무 문제가 없다.
+```
+
+이렇게 구성요소의 관계가 (`Dog`는 `Animal`의 서브타입), 복합타입에서도 그대로 유지되는 (`Dog[]`는 `Animal[]`의 서브타입)
+성질을 **공변성(covariance)**이라고 부른다.
+
+하지만, 언제나 이 관계가 그대로 유지되는 것은 아니다. 예를 들어, TypeScript에서 **함수의 인자 타입**에 대해서는 서브타입 관계가 **뒤집힌다.**
+
+```typescript
+type Compare<T> = (left: T, right: T) => number
+type CompareAnimals = Compare<Animal>
+type CompareCats = Compare<Cat>
+const compareCats: CompareCats = (left, right) => 1
+const compareAnimals: CompareAnimals = (left, right) => 1
+
+const compareCats2: CompareCats = compareAnimals
+// 아무 문제가 없다. 즉, CompareAnimals가 CompareCats의 서브타입으로 간주되었다.
+
+const compareAnimals2: CompareAnimals = compareCats
+// 타입 에러! Type 'CompareCats' is not assignable to type 'CompareAnimals'.
+```
+
+이렇게, `Cat`이 `Animal`의 서브타입임에도 불구하고, `Compare<Cat>`은 `Compare<Animal>`의 서브타입이 아닐 뿐 아니라, 오히려 `Compare<Animal>`이 `Compare<Cat>`의 서브타입이 된다. 이런 성질을 가지고 반공변성(contravariant)이라고 한다.
+
+주의! 단, 함수 인수는 `--strictFunctionType` 옵션을 켰을 때만 반공변적이 된다. TypeScript 2.6 이전까지는 `Cat[]`과 `Animal[]`이 각자 서로의 서브타입으로 간주됐었다. 즉 공변성과 반공변성의 성질을 모두 가지고 있었다. 이런 경우를 이변성(bivariant)이라고 부른다.
+
+---
+
+함수에 대한 유의할만한 성질이 더 있는데, TypeScript에서는 '인수 목록의 앞쪽 일부분만을 받는 함수'를 서브타입으로 간주한다.
+
+```typescript
+type F1 = (p1: number, p2: string) => void
+
+// F2는 F1의 인수 목록 중 앞쪽 일부분만을 받는다.
+type F2 = (p1: number) => void
+
+const f2: F2 = (p1: number) => { /* ... */ }
+const f1: F1 = f2
+// 아무 문제가 없다.
+```
+
+## 참고자료 링크
+
+- https://github.com/Microsoft/TypeScript/wiki/FAQ#why-are-function-parameters-bivariant
+- https://github.com/microsoft/TypeScript/pull/18654
+- https://medium.com/@michalskoczylas/covariance-contravariance-and-a-little-bit-of-typescript-2e61f41f6f68
+
+<!-- https://stackoverflow.com/questions/18666710/why-are-arrays-covariant-but-generics-are-invariant -->
+
