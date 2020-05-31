@@ -1,0 +1,70 @@
+---
+title: "Swift 에러 처리 - try, try!, try?"
+date: "2020-05-31"
+category: "tech"
+cover: https://graphql.org/
+tags:
+    - Swift
+---
+
+아래와 같은 에러 타입과 함수가 있다고 하자.
+
+```swift
+// 커스텀 에러 타입
+enum MyCustomError: Error {
+    case badError
+    case anotherErrorWithValue(value: Int)
+}
+
+// Swift에서는 에러를 발생시킬 수 있는 함수에는 반드시 throws 마킹을 해주어야 한다.
+func doSomething() throws -> Int {
+    // ... 문제가 생겼을 때 예외 발생
+    throw MyCustomError.badError
+    // ...
+    throw MyCustomError.anotherErrorWithValue(value: 1)
+}
+```
+
+위처럼 `throws` 마킹이 된 함수를 호출할 때에는, 반드시 그 앞에 `try`, `try!`, `try?` 셋 중 하나를 써주어야 한다.
+
+# try
+
+`try`를 앞에 써준 경우, 해당 코드 영역을 반드시 `do-catch` 구문으로 감싸주어야 한다. 즉, `try`는 '에러를 직접 처리하겠다'는 선언이다. `do-catch` 구문은 기본적으로 Java, JavaScript 등의 `try-catch`와 같은 기능을 한다. 다만, 가능한 모든 경우의 수를 처리해주지 않으면 컴파일 에러가 발생한다.
+
+```swift
+do {
+    let result = try doSomething()
+} catch MyCustomError.badError {
+    // badError 처리를 위한 코드를 여기에 작성한다.
+} catch MyCustomError.anotherErrorWithValue(let value) {
+    // anotherErrorWithValue 처리를 위한 코드를 여기에 작성한다.
+} catch {
+    // 예상하지 못한 에러가 발생한 경우
+    // 이 catch 절을 지우면 컴파일 에러가 발생한다.
+}
+```
+
+# try!
+
+`try!`를 앞에 써준 경우, `do-catch` 구문을 감싸주지 않아도 된다. 즉, 에러를 무시해버린다. 프로그램 실행 시 실제로 에러가 나면, 프로그램 전체가 멈춰버린다. 에러가 나도 상관없거나, 에러가 나지 않으리라는 확신이 있을 때 사용하기 적절하다.
+
+```swift
+let result = try! doSomething()
+// 만약 doSomething 실행 중에 에러가 발생하면, 프로그램 전체가 멈춰버린다.
+```
+
+# try?
+
+`try?`를 앞에 써준 경우, 에러가 나면 `nil`이 반환된다. 이에 따라, 반환값의 타입이 optional로 바뀐다. 에러 유형별로 별도의 처리를 해 줄 필요가 없는 경우, 간편하게 에러 처리를 하고싶은 경우에 사용하기 적절하다.
+
+```swift
+let result = try? doSomething()
+// 이 때, result 변수의 타입은 Int?로 추론된다.
+```
+
+`try?`와 nil-coalescing operator(`??`)를 함께 사용해서, 에러가 난 경우에 대신 사용할 값을 쉽게 지정해줄 수 있다.
+
+```swift
+let result = (try? doSomething()) ?? 0
+// 이 때, result 변수의 타입은 Int로 추론된다.
+```
