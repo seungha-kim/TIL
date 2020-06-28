@@ -3,3 +3,8 @@
     flex-direction: column;
     justify-content: center;
 }
+
+.post-wrap {
+    width: 768px;
+    margin: 0 auto;
+}
