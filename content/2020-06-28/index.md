@@ -61,7 +61,13 @@ v2.center = v1.center
 
 <img src="./vector.png">
 
-의도대로 동작시키려면, `v1.center`를 v1의 좌표계 기준으로 바꾸어주어야 한다. 이를 위해 `UIView.convert` 함수가 준비되어 있다.
+의도대로 동작시키려면, v1 좌표계 기준에서 v1 사각형의 중점을 계산해야 한다. 이를 위해 `v1.bounds`를 활용할 수 있다.
+
+```swift
+v2.center = CGPoint(v1.bounds.midX, v1.bounds.midY)
+```
+
+혹은 `self.view` 좌표계 기준의 값인 `v1.center`를 v1의 좌표계 기준으로 변환해줄 수도 있다. 이를 위해 `UIView.convert` 함수가 준비되어 있다.
 
 ```swift
 // v1.center는 self.view 좌표계 상의 점이다. 이를 v1 좌표계의 점으로 바꾼 후, v2.center에 대입해주어야 한다.
