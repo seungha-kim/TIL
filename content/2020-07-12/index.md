@@ -20,7 +20,7 @@ Autolayout으로 두 개의 UIView를 같이 중앙정렬 (화면 중앙에 나�
 - 뷰 계층구조를 대상으로 하는 작업에 끼어들게 되므로, 불필요한 오버헤드가 생긴다.
 - 더미 뷰가 메시지를 가로채는 버그가 생길 수 있고, 이는 찾기 어려운 버그다.
 
-참고 - `safeAreaLayoutGuide`가 UILayoutGuide의 인스턴스다.
+참고 - `safeAreaLayoutGuide`, `layoutMarginsGuide`가 UILayoutGuide의 인스턴스다.
 
 ```swift
 
