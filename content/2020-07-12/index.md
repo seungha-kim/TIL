@@ -1,5 +1,5 @@
 ---
-title: "UIView.bounds.origin"
+title: "UILayoutGuide"
 date: "2020-07-12"
 category: "tech"
 cover: https://graphql.org/
