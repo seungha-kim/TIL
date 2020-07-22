@@ -1,6 +1,6 @@
 ---
 title: "Cannot use mutating member on immutable value: 'self' is immutable"
-date: "2020-07-22"
+date: "2020-07-21"
 category: "tech"
 cover: https://graphql.org/
 tags:
