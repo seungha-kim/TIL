@@ -1,12 +1,3 @@
----
-title: "5월 셋째 주 배운 것들"
-date: "2020-05-17"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - iOS
----
-
 # DispatchQueue
 
 애플의 Dispatch 프레임워크는 멀티스레딩 구현을 위한 표준적인 방법으로 권장되고 있다. DispatchQueue 클래스의 역할은 웹 브라우저의 작업 큐와 비슷하게, 스레드 관리 및 작업 스케줄링을 알아서 해줌으로써 여러 디테일을 숨겨준다. 반면에 웹 브라우저의 작업 큐와 비교하면
@@ -33,7 +24,7 @@ func handleButtonTouch() {
 }
 ```
 
-# serial queue, concurrent queue
+## serial queue, concurrent queue
 
 DispatchQueue는 serial 방식과, concurrent 방식의 두 가지 모드를 가진다. 예를 들어, 위 코드에서 `DispatchQueue.main`은 serial 방식으로 동작하고, `DispatchQueue.global(...)`은 concurrent 방식으로 동작한다.
 

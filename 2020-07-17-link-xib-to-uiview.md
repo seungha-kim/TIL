@@ -1,12 +1,4 @@
----
-title: "xib 파일을 UIView에 연결하기"
-date: "2020-07-17"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - xib
-    - UIView
----
+# xib 파일을 UIView에 연결하기
 
 오늘은 xib 파일을 UIView에 연결하는 활동을 해보았따.
 

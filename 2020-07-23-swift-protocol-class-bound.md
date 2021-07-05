@@ -1,12 +1,4 @@
----
-title: "A protocol can be bounded to a specific class"
-date: "2020-07-23"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - Swift
-    - UIKit
----
+# A protocol can be bounded to a specific class
 
 특정 클래스를 상속받은 클래스만이 프로토콜을 따를 수 있도록, 프로토콜에 class bound를 지정할 수 있다.
 

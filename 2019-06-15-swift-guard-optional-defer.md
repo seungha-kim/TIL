@@ -1,11 +1,4 @@
----
-title: "Swift의 guard, optional chaning, defer"
-date: "2019-06-15"
-category: "tech"
-cover: https://developer.apple.com/swift/
-tags:
-    - swift
----
+# Swift의 guard, optional chaning, defer
 
 [Data Structures and Algorithms in Swift](https://store.raywenderlich.com/products/data-structures-and-algorithms-in-swift)를 보면서 Swift 공부를 하던 중에 배운 것을 남긴다.
 

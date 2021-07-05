@@ -1,12 +1,4 @@
----
-title: "UILayoutGuide"
-date: "2020-07-12"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - Swift
-    - UIView
----
+# UILayoutGuide
 
 Programming iOS 13 - Layout 파트 보는 중
 
@@ -78,4 +70,4 @@ class ViewController: UIViewController {
 
 출력 결과
 
-<img src="./screenshot.png">
+<img src="./2020-07-12-uilayoutguide/screenshot.png">

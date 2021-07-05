@@ -1,15 +1,6 @@
----
-title: "TypeScript - 제네릭 타입 인수의 추론"
-date: "2019-12-15"
-category: "tech"
-cover: https://typescriptlang.org
-tags:
-    - TypeScript
-    - Lookup Type
+# TypeScript - 제네릭 타입 인수의 추론
 
----
-
-# Type Argument Inference
+## Type Argument Inference
 
 제네릭은 타입 추론에서 빠질 수 없는 중요한 기능이다. 특히 여러 타입에 대응되는 함수를 만들 때, 일일이 타입을 지정해주지 않고도 인수로 들어온 값의 타입이 제네릭 타입으로 사용된다.
 
@@ -27,7 +18,7 @@ let output = identity<string>("myString");
 let output = identity("myString");
 ```
 
-# 값 인수를 통해 추론할 수 없는 타입 인수
+## 값 인수를 통해 추론할 수 없는 타입 인수
 
 함수의 인수와는 상관없이, 별개의 타입 인수를 받는 제네릭 함수를 만들 수도 있다.
 
@@ -45,7 +36,7 @@ function requestState<Data, Error>() {
 const state = requestState<number, string>()
 ```
 
-# 추론할 수 있는 타입 인수와, 추론할 수 없는 타입 인수를 함께 쓸 때의 어려움
+## 추론할 수 있는 타입 인수와, 추론할 수 없는 타입 인수를 함께 쓸 때의 어려움
 
 아래는 값 인수를 통해 추론할 수 있는 타입 인수와, 추론할 수 없는 타입 인수를 같이 쓰는 예제이다.
 
@@ -78,7 +69,7 @@ const state = requestState<number, string>('myState')
 const state = requestState<number, string, 'myState'>('myState')
 ```
 
-# 해결책 - 또다른 제네릭 클래스를 활용하기
+## 해결책 - 또다른 제네릭 클래스를 활용하기
 
 해결책은 어쨌든 값을 통한 추론을 활용하는 것이다. 제네릭 클래스를 만들어서, 이 클래스의 인스턴스를 타입 추론에 활용해볼 수 있다.
 

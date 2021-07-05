@@ -1,14 +1,4 @@
----
-title: "직접 만들어보는 React 상태 관리 라이브러리"
-date: "2019-12-08"
-category: "tech"
-cover: https://react.org
-tags:
-    - React
-    - Redux
-    - Context API
-
----
+# 직접 만들어보는 React 상태 관리 라이브러리
 
 회사에서 새로운 React 프로젝트를 하기로 했는데, 예전부터 느껴왔던 불편함을 직접 해결해보고 싶어서 간단하게 라이브러리를 만들어보기로 했다.
 
@@ -46,7 +36,7 @@ UI 표현을 위한 상태는 해당 UI와 같은 단위로 관리하는 것이 
 
 ## 그래서 직접 만들었다
 
-<img src="./ex.png">
+<img src="./2019-12-08-custom-state-management/ex.png">
 
 현재 목표로 하고 있는 것들은
 

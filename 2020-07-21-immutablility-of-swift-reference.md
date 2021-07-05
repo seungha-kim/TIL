@@ -1,11 +1,4 @@
----
-title: "Cannot use mutating member on immutable value: 'self' is immutable"
-date: "2020-07-21"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - Swift
----
+# Cannot use mutating member on immutable value: 'self' is immutable
 
 오늘 예상치 못한 에러를 만났다.
 

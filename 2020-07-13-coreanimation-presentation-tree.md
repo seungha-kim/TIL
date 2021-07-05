@@ -1,12 +1,4 @@
----
-title: "Core Animation - presentation tree"
-date: "2020-07-13"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - Swift
-    - UIView
----
+# Core Animation - presentation tree
 
 ```swift
 // https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/CoreAnimationBasics/CoreAnimationBasics.html#//apple_ref/doc/uid/TP40004514-CH2-SW3

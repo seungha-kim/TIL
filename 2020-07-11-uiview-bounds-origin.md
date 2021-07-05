@@ -1,12 +1,4 @@
----
-title: "UIView.bounds.origin"
-date: "2020-07-11"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - Swift
-    - UIView
----
+# UIView.bounds.origin
 
 `UIView.bounds.origin`는 `bounds`의 '좌측 상단 꼭지점의 좌표'(iOS 기준)를 의미한다. 이걸 변경하면, 좌측 상단의 좌표가 바뀐 만큼 서브뷰 전체가 따라서 평행이동한다. 서브뷰 전체를 특정 위치로 옮기고 싶을 때 이 성질을 활용할 수 있다.
 
@@ -40,4 +32,4 @@ class ViewController: UIViewController {
 (-10.0, -10.0, 300.0, 400.0)
 ```
 
-<img src="./screenshot.png">
+<img src="./2020-07-11-uiview-bounds-origin/screenshot.png">

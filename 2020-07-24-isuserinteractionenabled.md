@@ -1,12 +1,4 @@
----
-title: "UIView.isUserInteractionEnabled"
-date: "2020-07-24"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - Swift
-    - UIKit
----
+# UIView.isUserInteractionEnabled
 
 UI 요소의 인터랙션을 임시로 (혹은 영원히) 막고 싶을 때, `isUserInteractionEnabled` 속성에 `false`를 대입해주면 된다. 모든 서브뷰가 이 속성에 영향을 받는다.
 

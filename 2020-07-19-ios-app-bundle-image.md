@@ -1,12 +1,3 @@
----
-title: "iOS 앱 번들에 이미지를 포함시키고 불러오기"
-date: "2020-07-19"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - UIImage
----
-
 (Programming iOS 13 읽으며 내용 정리)
 
 # 앱 번들에 포함시키기

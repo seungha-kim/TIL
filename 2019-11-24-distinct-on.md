@@ -1,13 +1,4 @@
----
-title: "PostgreSQL - DISTNCT ON"
-date: "2019-11-24"
-category: "tech"
-cover: https://phoenixframework.org
-tags:
-    - SQL
-    - PostgreSQL
-
----
+# PostgreSQL - DISTNCT ON
 
 사이드 프로젝트 하다가 배운 것.
 

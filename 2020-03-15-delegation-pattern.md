@@ -1,12 +1,4 @@
----
-title: "Delegation pattern"
-date: "2020-03-15"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - Swift
-    - Design Pattern
----
+# Delegation pattern
 
 객체지향을 설명하는 책이나 글을 보면 'composition over inheritance', 상속보다 합성을 사용하라는 격언(?)이 종종 등장한다. 상속은 유연함이 떨어지고, 기능 재사용이 어렵다는 이유에서인데, 이는 널리 사용되는 OOP 언어(C#, Java 등)에서 제공하는 상속 기능이 다중 상속 지원을 하지 않는다는 한계점에 기인한다.
 

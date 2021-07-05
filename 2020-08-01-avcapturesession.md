@@ -1,12 +1,4 @@
----
-title: "AVCaptureSession"
-date: "2020-08-01"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - Swift
-    - AVFoundation
----
+# AVCaptureSession
 
 회사에서 음성인식 API를 연동하는 미션을 받아서, sample buffer를 얻어오는 방법을 찾아보는 중.
 

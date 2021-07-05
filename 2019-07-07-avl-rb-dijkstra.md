@@ -1,11 +1,4 @@
----
-title: "7월 첫째 주 배운 것들"
-date: "2019-07-07"
-category: "tech"
-cover: https://developer.apple.com/swift/
-tags:
-    - swift
----
+# 7월 첫째 주 배운 것들
 
 [Data Structure & Algorithms in Swift](https://www.raywenderlich.com/977854-data-structures-algorithms-in-swift)를 읽고 배운 것을 정리. 아래 나오는 코드도 이 책에서 따왔다.
 

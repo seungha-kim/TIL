@@ -1,12 +1,4 @@
----
-title: "iOS Auto Layout - Content Compression Resistance Priority"
-date: "2020-07-14"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - Swift
-    - UIView
----
+# iOS Auto Layout - Content Compression Resistance Priority
 
 이름도 참 길다... content compression resistance priority... 내용압축저항우선순위...
 

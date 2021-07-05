@@ -1,12 +1,4 @@
----
-title: "Kadane’s algorithm - 연속된 부분배열의 합이 최대가 되는 경우를 찾기"
-date: "2020-07-16"
-category: "tech"
-cover: https://graphql.org/
-tags:
-    - Algorithm
-    - Swift
----
+# Kadane’s algorithm - 연속된 부분배열의 합이 최대가 되는 경우를 찾기
 
 짝꿍분과 어제 같이 보았던 문제. https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 

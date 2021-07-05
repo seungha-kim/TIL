@@ -1,9 +1,4 @@
----
-title: "7월 넷째 주 배운 것들"
-date: "2019-07-28"
-category: "tech"
-cover: https://developer.apple.com/swift/
----
+# 7월 넷째 주 배운 것들
 
 # CodinGame
 
@@ -16,16 +11,16 @@ Swift 알고리즘 책을 다 보고 나서 공부를 어떻게 이어나가야 
 일주일에 최소 세 문제는 풀어보려는 생각이다.
 
 <figure>
-  <img src="./completed.png">
+  <img src="./2019-07-28-codingame/completed.png">
   <figcaption>이제까지 푼 문제들</figcaption>
 </figure>
 
 <figure>
-  <img src="./batman.png">
+  <img src="./2019-07-28-codingame/batman.png">
   <figcaption>인질 구출할 때 2차원 이진 탐색 하는 배트맨 (...)</figcaption>
 </figure>
 
 <figure>
-  <img src="./pikapcha.png">
+  <img src="./2019-07-28-codingame/pikapcha.png">
   <figcaption>미로찾기 피카츄</figcaption>
 </figure>
